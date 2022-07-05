@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from prometheus_fastapi_instrumentator import Instrumentator
 
-VERSION = "0.0.2"
+VERSION = "0.0.3"
 
 app = FastAPI()
 Instrumentator(excluded_handlers=["/metrics"]).instrument(app).expose(app)
